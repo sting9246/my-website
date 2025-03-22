@@ -1,11 +1,19 @@
-/* Modern Gradient Design */
+/* Animated Gradient Background */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    background: linear-gradient(270deg, #6a11cb, #2575fc, #ff6f61, #ffcc00);
+    background-size: 400% 400%;
+    animation: GradientBackground 10s ease infinite;
     color: white;
     text-align: center;
     padding: 50px;
     margin: 0;
+}
+
+@keyframes GradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 h1 {
@@ -57,24 +65,4 @@ button {
     color: white;
     border: none;
     padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #ff4a3d;
-}
-
-footer {
-    margin-top: 50px;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-}
-
-footer p {
-    margin: 0;
-    font-size: 0.9rem;
-}
+    font-size: 1rem

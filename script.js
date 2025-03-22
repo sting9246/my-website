@@ -44,3 +44,21 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 document.getElementById('myButton').addEventListener('click', () => {
     alert('Button clicked!');
 });
+// Modal JavaScript
+const modal = document.getElementById('myModal');
+const btn = document.getElementById('myButton');
+const span = document.querySelector('.close');
+
+btn.addEventListener('click', () => {
+    modal.style.display = 'block';
+});
+
+span.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+});

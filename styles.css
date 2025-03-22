@@ -65,4 +65,24 @@ button {
     color: white;
     border: none;
     padding: 10px 20px;
-    font-size: 1rem
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff4a3d;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}

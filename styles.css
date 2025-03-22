@@ -60,3 +60,13 @@ footer {
 .feature-item {
     animation: fadeIn 1s ease-in-out; /* Apply animation */
 }
+@media (max-width: 768px) {
+    /* Styles for mobile devices */
+    .feature-list {
+        flex-direction: column; /* Stack features vertically */
+    }
+    .feature-item {
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 20px; /* Space between features */
+    }
+}

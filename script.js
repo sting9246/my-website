@@ -25,3 +25,19 @@ features.forEach(feature => {
     `;
     featureList.appendChild(featureItem);
 });
+// Fetch data from an API
+fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(response => response.json()) // Convert response to JSON
+    .then(data => {
+        const featureList = document.querySelector('.feature-list');
+        data.slice(0, 3).forEach(post => { // Display first 3 posts
+            const featureItem = document.createElement('div');
+            featureItem.classList.add('feature-item');
+            featureItem.innerHTML = `
+                <h3>${post.title}</h3>
+                <p>${post.body}</p>
+            `;
+            featureList.appendChild(featureItem);
+        });
+    })
+    .catch(error => console.error('Error fetching data:', error));

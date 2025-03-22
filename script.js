@@ -41,3 +41,6 @@ fetch('https://jsonplaceholder.typicode.com/posts')
         });
     })
     .catch(error => console.error('Error fetching data:', error));
+document.getElementById('myButton').addEventListener('click', () => {
+    alert('Button clicked!');
+});
